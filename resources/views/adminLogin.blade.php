@@ -13,69 +13,82 @@
 
     <style>
         :root {
-            --navy: #202742;
-            --beige: #F5F0E8;
-            --white: #FFFFFF;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--beige);
-            color: var(--navy);
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .login-card {
-            border: none;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            background-color: var(--white);
-            overflow: hidden;
-            width: 100%;
-            max-width: 450px;
-            padding: 2.5rem;
-        }
-        .brand-icon {
-            width: 60px;
-            height: 60px;
-            background-color: var(--beige);
-            color: var(--navy);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin: 0 auto 1.5rem auto;
-            font-size: 1.5rem;
-        }
-        .btn-navy {
-            background-color: var(--navy);
-            color: var(--white);
-            border-radius: 50rem;
-            padding: 0.75rem;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-        .btn-navy:hover {
-            background-color: #2c355a;
-            color: var(--white);
-        }
-        .form-control {
-            border-radius: 50rem;
-            padding: 0.75rem 1.25rem;
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-        }
-        .form-control:focus {
-            box-shadow: none;
-            border-color: var(--navy);
-            background-color: var(--white);
-        }
-        .form-label {
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-left: 0.5rem;
-        }
+    --black: #000000;
+    --gray-dark: #1a1a1a;
+    --gray-light: #f4f4f4;
+    --gray-border: #e0e0e0;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--gray-light);
+    color: var(--black);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    border: 1px solid var(--gray-border);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    padding: 2.5rem;
+}
+
+.brand-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.5rem;
+}
+
+.btn-navy {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 50rem;
+    padding: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+    border: 1px solid var(--black);
+}
+
+.btn-navy:hover {
+    background-color: var(--gray-dark);
+    color: var(--white);
+}
+
+.form-control {
+    border-radius: 50rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--gray-light);
+    border: 1px solid var(--gray-border);
+    color: var(--black);
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--black);
+    background-color: var(--white);
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    color: var(--black);
+}
     </style>
 </head>
 <body>

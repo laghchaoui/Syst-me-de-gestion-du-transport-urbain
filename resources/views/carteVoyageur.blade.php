@@ -14,21 +14,21 @@
 
     <style>
         /* ==========================================================================
-           1. CHARTE GRAPHIQUE & PALETTE DE COULEURS
-           ========================================================================== */
+            1. CHARTE GRAPHIQUE & PALETTE DE COULEURS (Monochrome Noir & Blanc)
+            ========================================================================== */
         :root {
-            --navy-blue: #202742;
-            --navy-light: #2c3558;
-            --light-beige: #F5F0E8;
+            --navy-blue: #000000;
+            --navy-light: #222222;
+            --light-beige: #f8f9fa;
             --pure-white: #FFFFFF;
-            --border-gray: #E2E8F0;
-            --text-dark: #2B2F3E;
-            --text-muted: #64748B;
+            --border-gray: #dcdcdc;
+            --text-dark: #111111;
+            --text-muted: #666666;
             
-            /* Couleurs distinctives par type de transport */
-            --bus-color: #E67E22;
-            --tram-color: #C0392B;
-            --busway-color: #16A085;
+            /* Nuances de gris distinctives pour les types de transport */
+            --bus-color: #333333;
+            --tram-color: #000000;
+            --busway-color: #666666;
         }
 
         body {
@@ -46,8 +46,8 @@
         }
 
         .section-badge {
-            background-color: rgba(32, 39, 66, 0.1);
-            color: var(--navy-blue);
+            background-color: rgba(0, 0, 0, 0.06);
+            color: var(--text-dark);
             font-weight: 600;
             font-size: 0.85rem;
             padding: 0.4rem 1rem;
@@ -57,7 +57,7 @@
         }
 
         .section-title {
-            color: var(--navy-blue);
+            color: var(--text-dark);
             font-weight: 800;
             letter-spacing: -0.5px;
         }
@@ -67,7 +67,7 @@
             background-color: var(--pure-white);
             border: 1px solid var(--border-gray);
             border-radius: 1.25rem;
-            box-shadow: 0 10px 30px rgba(32, 39, 66, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
             padding: 1.75rem;
             height: 100%;
         }
@@ -86,7 +86,8 @@
 
         .mode-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            border-color: var(--text-dark);
         }
 
         .mode-card i {
@@ -94,34 +95,36 @@
             margin-bottom: 0.5rem;
             display: block;
             transition: transform 0.25s ease;
+            color: var(--text-muted);
         }
 
         .mode-card:hover i {
             transform: scale(1.1);
+            color: var(--text-dark);
         }
 
         .mode-card .mode-title {
             font-weight: 700;
             font-size: 0.85rem;
-            color: var(--navy-blue);
+            color: var(--text-dark);
         }
 
-        /* États Sélectionnés par type */
+        /* États Sélectionnés par type (nuances monochromes) */
         .mode-card.selected-bus {
             border-color: var(--bus-color);
-            background-color: rgba(230, 126, 34, 0.06);
+            background-color: rgba(51, 51, 51, 0.05);
         }
         .mode-card.selected-bus i { color: var(--bus-color); }
 
         .mode-card.selected-tram {
             border-color: var(--tram-color);
-            background-color: rgba(192, 57, 43, 0.06);
+            background-color: rgba(0, 0, 0, 0.06);
         }
         .mode-card.selected-tram i { color: var(--tram-color); }
 
         .mode-card.selected-busway {
             border-color: var(--busway-color);
-            background-color: rgba(22, 160, 133, 0.06);
+            background-color: rgba(102, 102, 102, 0.05);
         }
         .mode-card.selected-busway i { color: var(--busway-color); }
 
@@ -129,7 +132,7 @@
         .form-label-custom {
             font-weight: 700;
             font-size: 0.9rem;
-            color: var(--navy-blue);
+            color: var(--text-dark);
             margin-bottom: 0.5rem;
         }
 
@@ -138,19 +141,20 @@
             border-radius: 0.75rem;
             padding: 0.75rem 1rem;
             font-weight: 600;
-            color: var(--navy-blue);
+            color: var(--text-dark);
+            background-color: var(--pure-white);
             transition: border-color 0.2s ease;
         }
 
         .form-select-custom:focus {
-            border-color: var(--navy-blue);
-            box-shadow: 0 0 0 0.25rem rgba(32, 39, 66, 0.15);
+            border-color: var(--text-dark);
+            box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
         }
 
         /* Encadré Trajet & Infos */
         .route-info-box {
-            background-color: rgba(245, 240, 232, 0.5);
-            border: 1px dashed #D1D5DB;
+            background-color: rgba(0, 0, 0, 0.02);
+            border: 1px dashed var(--border-gray);
             border-radius: 0.85rem;
             padding: 1rem;
             margin-top: 1.25rem;
@@ -160,12 +164,12 @@
         .route-display {
             font-weight: 700;
             font-size: 1.05rem;
-            color: var(--navy-blue);
+            color: var(--text-dark);
         }
 
         /* Bouton d'action principal */
         .btn-action {
-            background-color: var(--navy-blue);
+            background-color: var(--text-dark);
             color: var(--pure-white);
             font-weight: 700;
             padding: 0.85rem 1.5rem;
@@ -173,14 +177,14 @@
             border: none;
             width: 100%;
             transition: all 0.25s ease;
-            box-shadow: 0 4px 12px rgba(32, 39, 66, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .btn-action:hover {
             background-color: var(--navy-light);
             color: var(--pure-white);
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(32, 39, 66, 0.3);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
         }
 
         .btn-action:active {
@@ -195,7 +199,7 @@
             border-radius: 1.25rem;
             overflow: hidden;
             border: 1px solid var(--border-gray);
-            box-shadow: 0 10px 30px rgba(32, 39, 66, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
         }
 
         #map {
@@ -217,8 +221,8 @@
             padding: 0.5rem 0.85rem;
             font-weight: 600;
             font-size: 0.85rem;
-            color: var(--navy-blue);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            color: var(--text-dark);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             transition: all 0.2s ease;
             display: flex;
@@ -227,7 +231,7 @@
         }
 
         .map-btn-recenter:hover {
-            background-color: var(--navy-blue);
+            background-color: var(--text-dark);
             color: var(--pure-white);
         }
 
@@ -242,7 +246,7 @@
             border: 1px solid var(--border-gray);
             border-radius: 0.75rem;
             padding: 0.75rem 1rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             font-size: 0.8rem;
         }
 
@@ -271,15 +275,15 @@
             top: 15px;
             left: 55px;
             z-index: 1000;
-            background: rgba(245, 240, 232, 0.92);
-            border: 1px solid rgba(32, 39, 66, 0.2);
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(0, 0, 0, 0.15);
             padding: 0.35rem 0.75rem;
             border-radius: 50rem;
             font-size: 0.75rem;
             font-weight: 700;
-            color: var(--navy-blue);
+            color: var(--text-dark);
             pointer-events: none;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         /* Style des badges d'information de ligne */
@@ -294,7 +298,7 @@
 
         .badge-info-item .val {
             font-weight: 700;
-            color: var(--navy-blue);
+            color: var(--text-dark);
             display: block;
         }
 

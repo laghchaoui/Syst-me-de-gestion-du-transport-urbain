@@ -15,54 +15,68 @@
 
     <style>
         :root {
-            --navy: #202742;
-            --beige: #F5F0E8;
-            --white: #FFFFFF;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--beige);
-            color: var(--navy);
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            background-color: var(--navy);
-        }
-        .navbar-brand, .nav-link {
-            color: var(--white) !important;
-        }
-        .hero-section {
-            background-color: var(--navy);
-            color: var(--white);
-            padding: 4rem 1rem;
-            border-radius: 0 0 2rem 2rem;
-        }
-        .card-custom {
-            border: none;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            background-color: var(--white);
-            transition: transform 0.2s ease;
-        }
-        .card-custom:hover {
-            transform: translateY(-3px);
-        }
-        #map {
-            height: 500px;
-            border-radius: 1rem;
-            z-index: 1;
-        }
-        .badge-transport {
-            font-size: 0.85rem;
-            padding: 0.4em 0.8em;
-        }
-        footer {
-            background-color: var(--navy);
-            color: var(--white);
-            padding: 3rem 0;
-            margin-top: 4rem;
-        }
+    --black: #000000;
+    --gray-light: #f8f9fa;
+    --white: #FFFFFF;
+    --border-gray: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--gray-light);
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: var(--black);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--white) !important;
+}
+
+.hero-section {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 4rem 1rem;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.card-custom {
+    border: 1px solid var(--border-gray);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
+    transition: transform 0.2s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-3px);
+}
+
+#map {
+    height: 500px;
+    border-radius: 1rem;
+    z-index: 1;
+    border: 1px solid var(--border-gray);
+}
+
+.badge-transport {
+    font-size: 0.85rem;
+    padding: 0.4em 0.8em;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 50rem;
+}
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
     </style>
 </head>
 <body>
@@ -369,4 +383,4 @@
         });
     </script>
 </body>
-</html>
+</html>                                                                                                                                                                                 
